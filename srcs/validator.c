@@ -86,12 +86,10 @@ long	*create_data_list(char **array, int size)
 int	is_valid(char **array, int size)
 {
 	long	*data_list;
-	int		i;
 
 	if (non_int_chr(array, size))
 		return (0);
 	data_list = create_data_list(array, size);
-	i = -1;
 	if (duplicates(data_list, size) || overflow(data_list, size))
 	{
 		free(data_list);
